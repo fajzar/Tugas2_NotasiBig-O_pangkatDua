@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+
+public class pangkatDua {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Masukkan Bilangan :");
+        double bilangan = input.nextDouble();
+        System.out.println("Masukkan Pangkat :");
+        int pangkat = input.nextInt();
+        double hasil = hitungPangkatDua(bilangan, pangkat);
+        System.out.println("hasil " + bilangan + " pangkat " + pangkat + " adalah " + hasil);
+        input.close();
+    }
+
+    public static double hitungPangkatDua(double bilangan, int pangkat) {
+       double hasil =  1;
+       for (int i = 0; i < pangkat; i ++){
+           hasil *= bilangan;
+       }
+       return hasil;
+    }
+    
+}
